@@ -1,8 +1,8 @@
-const Todocontext = createContext()
-
 import { createContext, useContext, useRef, useState } from 'react'
 
-export function TodoProvider({ childern }) {
+const TodoContext = createContext()
+
+export function TodoProvider({ children }) {
     const lastId = useRef(4)
 
     const [todos, setTodos] = useState([
@@ -33,11 +33,12 @@ export function TodoProvider({ childern }) {
         removeTodo,
         toggleTodo,
     }
-    return <TodoContext.Provider value={value}>{childern}</TodoContext.Provider>
+
+    return <TodoContext.Provider value={value}>{children}</TodoContext.Provider>
 }
 
 export function useTodos() {
-    const context = useContext(todocontext)
+    const context = useContext(TodoContext)
 
     return context
 }
