@@ -1,4 +1,4 @@
-import { createContext, useContext, useRef, useState, useEffect } from 'react'
+import { createContext, useContext, useRef, useState } from 'react'
 
 const TodoContext = createContext()
 
