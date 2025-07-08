@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Main from './pages/Main.jsx'
-import Main from './pages/Sub.jsx'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Main from './pages/Main'
+import Sub from './pages/Sub'
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route index element={<Main />}></Route>
-                <Route path="/sub" element={<Sub />}></Route>
+                <Route path="/new" element={<Sub />}></Route>
             </Routes>
         </BrowserRouter>
     )
